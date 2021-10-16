@@ -1,0 +1,37 @@
+2021-10-16/10:42:08		Start of Training
+2021-10-16/10:42:08		you Entered get_data method of Data_Getter class
+2021-10-16/10:42:08		Data Load Successful
+2021-10-16/10:42:08		Entered the separate_label_feature method of the Preprocessor class
+2021-10-16/10:42:08		Label Separation Successful. Exited the separate_label_feature method of the Preprocessor class
+2021-10-16/10:42:08		Entered the is_null_present method of the Preprocessor class
+2021-10-16/10:42:08		Finding missing values is a success.Data written to the null values file. Exited the is_null_present method of the Preprocessor class
+2021-10-16/10:42:08		Entered the impute_missing_values method of the Preprocessor class
+2021-10-16/10:43:04		Imputing missing values Successful. Exited the impute_missing_values method of the Preprocessor class
+2021-10-16/10:43:04		Entered the elbow_plot method of the KMeansClustering class
+2021-10-16/10:43:55		The optimum number of clusters is: 3 . Exited the elbow_plot method of the KMeansClustering class
+2021-10-16/10:43:55		Entered the create_clusters method of the KMeansClustering class
+2021-10-16/10:43:58		Entered the save_model method of the File_Operation class
+2021-10-16/10:43:58		Model File KMeans saved. Exited the save_model method of the Model_Finder class
+2021-10-16/10:43:58		succesfully created 3clusters. Exited the create_clusters method of the KMeansClustering class
+2021-10-16/10:43:58		Entered the get_best_model method of the Model_Finder class
+2021-10-16/10:43:58		Entered the get_best_params_for_Ensembled_KNN method of the Model_Finder class
+2021-10-16/10:54:27		KNN best params: {'algorithm': 'brute', 'leaf_size': 10, 'n_neighbors': 5, 'p': 2}. Exited the KNN method of the Model_Finder class
+2021-10-16/10:54:34		AUC for knn:0.9986186561308322
+2021-10-16/10:54:34		Entered the get_best_params_for_random_forest method of the Model_Finder class
+2021-10-16/10:55:37		Random Forest best params: {'criterion': 'gini', 'max_depth': 3, 'max_features': 'auto', 'n_estimators': 10}. Exited the get_best_params_for_random_forest method of the Model_Finder class
+2021-10-16/10:55:37		AUC for RF:0.8891505169388058
+2021-10-16/10:55:37		Entered the get_best_model method of the Model_Finder class
+2021-10-16/10:55:37		Entered the get_best_params_for_Ensembled_KNN method of the Model_Finder class
+2021-10-16/11:26:06		KNN best params: {'algorithm': 'kd_tree', 'leaf_size': 24, 'n_neighbors': 4, 'p': 2}. Exited the KNN method of the Model_Finder class
+2021-10-16/11:26:07		AUC for knn:0.9998544009992293
+2021-10-16/11:26:07		Entered the get_best_params_for_random_forest method of the Model_Finder class
+2021-10-16/11:27:43		Random Forest best params: {'criterion': 'gini', 'max_depth': 3, 'max_features': 'auto', 'n_estimators': 100}. Exited the get_best_params_for_random_forest method of the Model_Finder class
+2021-10-16/11:27:43		AUC for RF:0.8822512859186219
+2021-10-16/11:27:43		Entered the get_best_model method of the Model_Finder class
+2021-10-16/11:27:43		Entered the get_best_params_for_Ensembled_KNN method of the Model_Finder class
+2021-10-16/12:44:04		KNN best params: {'algorithm': 'ball_tree', 'leaf_size': 10, 'n_neighbors': 4, 'p': 1}. Exited the KNN method of the Model_Finder class
+2021-10-16/12:44:08		AUC for knn:1.0
+2021-10-16/12:44:08		Entered the get_best_params_for_random_forest method of the Model_Finder class
+2021-10-16/12:45:56		Random Forest best params: {'criterion': 'entropy', 'max_depth': 3, 'max_features': 'log2', 'n_estimators': 50}. Exited the get_best_params_for_random_forest method of the Model_Finder class
+2021-10-16/12:45:56		AUC for RF:0.9909368310538147
+2021-10-16/12:45:56		Successful End of Training

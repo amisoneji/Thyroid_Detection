@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Thyroid Detection</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+          <ul>
+
+            <!-- 1 -->
+            <li><lable for="Age">Enter Age:<input type="number" name="Age" min="0" id="Age" placeholder="Enter Age">
+
+            <!-- 2 -->
+            <li><label for="Sex">Select Gender:</label>
+                <select name="Sex" id="Sex">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select></li>
+
+            <!-- 3 -->
+            <li><label for="On_thyroxine">On thyroxine?</label>
+                <select name="On_thyroxine" id="On_thyroxine">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+
+            <!-- 4 -->
+            <li><label for="query_on_thyroxine">Query on thyroxine?</label>
+                <select name="query_on_thyroxine" id="query_on_thyroxine">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+
+            <!-- 5 -->
+            <li><label for="On_antithyroid_medication">On Antithyroid Medication?</label>
+                <select name="On_antithyroid_medication" id="On_antithyroid_medication">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+
+            <!-- 6 -->
+            <li><label for="sick">Sick?</label>
+                <select name="sick" id="sick">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+
+
+            <!-- 7 -->
+             <li><label for="pregnant">Pregnant?</label>
+                <select name="pregnant" id="pregnant">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+
+            <!-- 8 -->
+              <li><label for="thyroid_surgery">Had Thyroid Surgery?</label>
+                <select name="thyroid_surgery" id="thyroid_surgery">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+
+
+              <!-- 9 -->
+              <li><label for="I131_treatment">I131 Treatment?</label>
+                <select name="I131_treatment" id="I131_treatment">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+
+
+              <!-- 10 -->
+              <li><label for="query_hypothyroid">Query Hypothyroid?</label>
+                <select name="query_hypothyroid" id="query_hypothyroid">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+
+              <!-- 11 -->
+              <li><label for="query_hyperthyroid">Query Hyperthyroid?</label>
+                <select name="query_hyperthyroid" id="query_hyperthyroid">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+
+              <!-- 12 -->
+              <li><label for="lithium">Lithium Presence?</label>
+                <select name="lithium" id="lithium">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+
+              <!-- 13 -->
+              <li><label for="goitre">Goitre</label>
+                <select name="goitre" id="goitre">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+
+              <!-- 14 -->
+              <li><label for="tumor">Tumor</label>
+                <select name="tumor" id="tumor">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+
+              <!-- 15 -->
+              <li><label for="hypopituitary">hypopituitary</label>
+                <select name="hypopituitary" id="hypopituitary">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+              <!-- 16 -->
+              <li><label for="psych">psych</label>
+                <select name="psych" id="psych">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+              <!-- 17 -->
+              <li><label for="T3">T3</label>
+                <select name="T3" id="T3">
+                <option value="True">True</option>
+                <option value="False">False</option>
+                </select></li>
+              <!-- 18 -->
+              <li><lable for="Age">TT4 Level value:<input type="number" name="TT4" id="TT4"  min='0' placeholder="TT4 Level"></li>
+
+              <li><lable for="Age">T4U Level value:<input type="number" name="T4U" id="T4U" step="0.01" min='0' placeholder="TSH Level"></li>
+              <!-- 20 -->
+              <li><lable for="Age">FTI Level value:<input type="number" name="FTI" id="FTI" min='0' placeholder="FTI Value"></li>
+
+              <!-- 21 -->
+              <li><label for="referral_source">Referral Source</label>
+                <select name="referral_source" id="referral_source">
+                <option value="SVI">SVI</option>
+                <option value="other">other</option>
+                <option value="SVHD">SVHD</option>
+                <option value="STMW">STMW</option>
+                </select></li>
+
+</select>
+            <input type="submit" value="Predict">
+          </ul>
+        </form>
+    </div>
+</div>
+{% endblock %}
